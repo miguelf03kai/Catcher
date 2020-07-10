@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class food : MonoBehaviour {
 
+    public float init_pos;
     float position_y = 5.406f;
     float random = -2.372f;
     //list positions
-    float[] position = new float[] { -2.372f, -1.5f, -0.628f, 0.244f, 1.116f }; 
+    float[] position = new float[] { -2.372f, -1.5f, -0.628f, 0.244f, 1.116f };
+ 
 	// Use this for initialization
 	void Start () {
         //rb = GetComponent<Rigidbody2D>();
@@ -20,7 +22,7 @@ public class food : MonoBehaviour {
     {
         random = position[Random.Range(0, position.Length)];
 
-        position_y = 5.406f;
+        position_y = init_pos;
         transform.position = new Vector2(random, position_y);
 
     }
@@ -28,7 +30,7 @@ public class food : MonoBehaviour {
 
     //Update is called once per frame
     void Update() {
-        Debug.Log(position_y);
+        //Debug.Log(position_y);
 
         if (transform.position.y < -4.16f)
         {
@@ -41,7 +43,7 @@ public class food : MonoBehaviour {
     {
         if (transform.position.y < -4.16f)
         {
-            position_y = 5.406f;
+            position_y = init_pos;
             transform.position = new Vector2(random, position_y);
         }
         else

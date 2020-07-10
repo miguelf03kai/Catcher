@@ -8,17 +8,17 @@ public class player : MonoBehaviour {
 
     Rigidbody2D rb;
     public float key = 0;
-    int life = 10;
-    int points = 0;
+    public int life = 3;
+    public static int points;
     public Text myPoints,text_life;
     points p;
-    
 
 	// Use this for initialization
 	void Start () {
         //rb = GetComponent<Rigidbody2D>();
         //p = (points)GetComponent<points>();
-        //text_life.text = "" + life;
+        points = 0;
+        text_life.text = "" + life;
         //myPoints.text = "" + p.score;
        
 	}
@@ -26,7 +26,7 @@ public class player : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D coll)
     {
 
-        if (coll.gameObject.tag == "enemy")
+        if (coll.gameObject.tag == "damage")
         {
             life -= 1;
 
@@ -38,7 +38,7 @@ public class player : MonoBehaviour {
             points += 1;
             myPoints.text = "" + points;
 
-            Debug.Log("what");
+            Debug.Log(points);
         }
     }
 
@@ -69,10 +69,12 @@ public class player : MonoBehaviour {
                 transform.position = new Vector2(transform.position.x - 0.872f, -3.044f);
             }
         }
-        
 
-        //if(life == 0){
-        //    SceneManager.LoadScene(1);
-        //}
+        if (life == 0)
+        {
+            SceneManager.LoadScene(2);
+        }
 	}
+
+    
 }
