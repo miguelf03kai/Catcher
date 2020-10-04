@@ -52,9 +52,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scripts\button_startGame.cs" />
+     <Compile Include="Assets\scripts\createObject.cs" />
      <Compile Include="Assets\scripts\enemy.cs" />
      <Compile Include="Assets\scripts\food.cs" />
+     <Compile Include="Assets\scripts\food_gravity.cs" />
      <Compile Include="Assets\scripts\left_button.cs" />
+     <Compile Include="Assets\scripts\level_select.cs" />
+     <Compile Include="Assets\scripts\options.cs" />
+     <Compile Include="Assets\scripts\paause.cs" />
      <Compile Include="Assets\scripts\player.cs" />
      <Compile Include="Assets\scripts\points.cs" />
      <Compile Include="Assets\scripts\right_button.cs" />

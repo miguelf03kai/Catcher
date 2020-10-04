@@ -6,6 +6,9 @@ public class left_button : MonoBehaviour {
 
     public Rigidbody2D pl;
 
+    //float[] position = new float[] { -2.372f, -1.486f, -0.604f, 0.281f, 1.164f };
+    //int i = 2;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +21,7 @@ public class left_button : MonoBehaviour {
 
     public void leftClick()
     {
-        if (pl.position.x == -2.372f)
+        if (pl.position.x < -1.486f)
         {
             Debug.Log("stay there");
         }
@@ -26,5 +29,15 @@ public class left_button : MonoBehaviour {
         {
             pl.position = new Vector2(pl.position.x - 0.872f, -3.044f);
         }
+
+        //if (i == 0)
+        //{
+        //    Debug.Log("Stop Here");
+        //}
+        //else
+        //{
+        //    i--;
+        //    transform.position = new Vector2(pl.position[i], -3.044f);
+        //}
     }
 }

@@ -19,4 +19,20 @@ public class button_startGame : MonoBehaviour {
     {
         SceneManager.LoadScene(1);
     }
+
+    public void quiteGame()
+    {
+        Debug.Log("exiting");
+        Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void level()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
