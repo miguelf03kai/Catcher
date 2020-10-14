@@ -33,10 +33,12 @@ public class createObject : MonoBehaviour {
         //if (food_gravity.i == 2)
         //{
         //    Debug.Log("test");
-        //} 
-        if(limit <= 10)
-          StartCoroutine(Example());
-
+        //}
+        if (paause.stopped != true)
+        {
+            if (limit <= 10)
+                StartCoroutine(Example());
+        }
         //Debug.Log(position[2]);
 	}
 
