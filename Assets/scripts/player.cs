@@ -15,6 +15,13 @@ public class player : MonoBehaviour {
     //float init_position = -0.604f;
     float[] position = new float[] { -2.372f, -1.486f, -0.604f, 0.281f, 1.164f };
     int i = 2;
+    public AudioSource coin;
+    public AudioSource up;
+    public AudioSource damage;
+
+    bool tone = false;
+    int tone2 = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +35,7 @@ public class player : MonoBehaviour {
 
         //transform.position = new Vector2(-0.604f, -3.044f);
        
+        //coin = GetComponent<AudioSource>();
 	}
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -36,6 +44,7 @@ public class player : MonoBehaviour {
         if (coll.gameObject.tag == "damage")
         {
             life -= 1;
+            damage.Play();
 
             //Debug.Log("you got "+points);
             text_life.text = "" + life;   
@@ -43,7 +52,20 @@ public class player : MonoBehaviour {
         else if(coll.gameObject.tag == "food")
         {
             points += 10;
+            tone2 +=1; 
+            if(tone2 == 10)
+                tone = true;
+
             myPoints.text = "" + points;
+
+            if (tone == true)
+            {
+                up.Play();
+                tone2 = 0;
+                tone = false;
+            }
+            else
+                coin.Play();
 
             //Debug.Log(points);
         }

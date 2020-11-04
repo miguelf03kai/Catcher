@@ -56,6 +56,7 @@
      <Compile Include="Assets\scripts\enemy.cs" />
      <Compile Include="Assets\scripts\food.cs" />
      <Compile Include="Assets\scripts\food_gravity.cs" />
+     <Compile Include="Assets\scripts\hi_score.cs" />
      <Compile Include="Assets\scripts\left_button.cs" />
      <Compile Include="Assets\scripts\level_select.cs" />
      <Compile Include="Assets\scripts\options.cs" />
