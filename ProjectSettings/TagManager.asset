@@ -7,6 +7,8 @@ TagManager:
   - enemy
   - food
   - damage
+  - fish
+  - star
   layers:
   - Default
   - TransparentFX

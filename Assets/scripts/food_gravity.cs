@@ -30,8 +30,11 @@ public class food_gravity : MonoBehaviour {
             //Debug.Log(random);
 
             i = 0;
-            transform.position = new Vector2(random, vertical_position[i]);
+            transform.position = new Vector2(random, 5.57f);//vertical_position[i]);
         }
+
+        if (coll.gameObject.tag == "damage" || coll.gameObject.tag == "food" || coll.gameObject.tag == "fish" || coll.gameObject.tag == "star")
+            Destroy(gameObject);
     }
 	
 	// Update is called once per frame
@@ -41,8 +44,9 @@ public class food_gravity : MonoBehaviour {
 
         if (transform.position.y < -3.873f)
         {
-            transform.position = new Vector2(position[Random.Range(0,position.Length)],7.112f);
+            //transform.position = new Vector2(position[Random.Range(0,position.Length)],5.57f);
             //Debug.Log("test");
+            Destroy(gameObject);
         }
 
         transform.Translate(Vector3.down * speed);

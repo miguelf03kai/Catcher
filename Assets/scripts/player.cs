@@ -18,9 +18,10 @@ public class player : MonoBehaviour {
     public AudioSource coin;
     public AudioSource up;
     public AudioSource damage;
+    public AudioSource power;
 
     bool tone = false;
-    int tone2 = 0;
+    public int tone2 = 0;
 
 
 	// Use this for initialization
@@ -49,7 +50,7 @@ public class player : MonoBehaviour {
             //Debug.Log("you got "+points);
             text_life.text = "" + life;   
         }
-        else if(coll.gameObject.tag == "food")
+        else if(coll.gameObject.tag == "food" || coll.gameObject.tag == "fish")
         {
             points += 10;
             tone2 +=1; 
@@ -68,6 +69,12 @@ public class player : MonoBehaviour {
                 coin.Play();
 
             //Debug.Log(points);
+        }
+        else if(coll.gameObject.tag == "star"){
+            points += 1000;
+            myPoints.text = "" + points;
+            power.Play();
+
         }
     }
 

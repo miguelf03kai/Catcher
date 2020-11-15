@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/game_level.unity
     guid: 0705578326a63f749bdd56948cd83973
+  - enabled: 1
+    path: Assets/stats.unity
+    guid: 8a16337656451324bb92124e87fbac2a

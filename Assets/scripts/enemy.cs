@@ -4,29 +4,41 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour {
 
-    Rigidbody2D rb;
+    float[] position = new float[] { -2.372f, -1.486f, -0.604f, 0.281f, 1.164f };
+    int i = 0;
 
+    public static int level = 2;
 	// Use this for initialization
 	void Start () {
-        rb = GetComponent<Rigidbody2D>();
+        
 	}
 
-    void OnTriggerEnter2D(Collider2D other) {
+   void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Player")
+        {
+            float random = position[Random.Range(0, position.Length)];
+            //Debug.Log(random);
 
-        transform.position = new Vector2(Random.Range(-5.76f, 2.41f), 5.96f);
-    
+            i = 0;
+            transform.position = new Vector2(random, 5.57f);//vertical_position[i]);
+        }
+
+        if (coll.gameObject.tag == "damage")
+            Destroy(gameObject);
     }
-
 
 	// Update is called once per frame
 	void Update () {
-        //rb.AddForce(new Vector2(0,-speed_fall));
-         transform.Translate(0,-0.03f,0);
+        float speed = level * Time.deltaTime;
 
-         if (transform.position.y <= -6.03f)
-         {
-             //change the position of food
-             transform.position = new Vector2(Random.Range(-5.76f, 2.41f), 5.96f);   
-         }
-	}
+        if (transform.position.y < -3.873f)
+        {
+            //transform.position = new Vector2(position[Random.Range(0,position.Length)],5.57f);
+            //Debug.Log("test");
+            Destroy(gameObject);
+        }
+
+        transform.Translate(Vector3.down * speed);
+    }
 }

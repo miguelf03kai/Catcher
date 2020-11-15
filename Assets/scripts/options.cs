@@ -15,4 +15,8 @@ public class options : MonoBehaviour {
 		
 	}
 
+	public void backButton(){
+		SceneManager.LoadScene(0);
+	}
+
 }

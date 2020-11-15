@@ -35,4 +35,8 @@ public class button_startGame : MonoBehaviour {
     {
         SceneManager.LoadScene(3);
     }
+
+    public void statistics(){
+        SceneManager.LoadScene(4);
+    }
 }
