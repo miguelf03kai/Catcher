@@ -4,8 +4,8 @@ It's a Game developed as homework of my degree course (Analysis and System Devel
 
 # Screenshots
 
-![capture](screenshots/Capture1.png)
+![Catcher](screenshots/Capture1.PNG)
 
-![capture](screenshots/Capture2.png)
+![Catcher](screenshots/Capture2.PNG)
 
-![capture](screenshots/Capture3.png)
+![Catcher](screenshots/Capture3.PNG)
