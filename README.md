@@ -1,6 +1,6 @@
 # Catcher
 
-It's a Game developed as homework of my degree course (Analysis and System Development).
+It's a Game developed as homework of my degree course (Analysis and System Development) for Android.
 
 # Screenshots
 
