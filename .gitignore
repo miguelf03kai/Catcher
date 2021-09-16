@@ -1,0 +1,11 @@
+Project_Sources/
+Temp/
+.vscode/
+screenshots/
+Library/
+obj/
+
+*.suo
+*.sln
+*.csproj
+*.log
