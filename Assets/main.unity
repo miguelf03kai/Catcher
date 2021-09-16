@@ -156,6 +156,7 @@ MonoBehaviour:
   up: {fileID: 107337900}
   damage: {fileID: 107337902}
   power: {fileID: 107337904}
+  music: {fileID: 107337903}
   tone2: 0
 --- !u!50 &107337896
 Rigidbody2D:
@@ -508,8 +509,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b0499d28bdc2a444597939a10eb08624, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: d8b4c711da358924c94f4a49eefd84c9, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1

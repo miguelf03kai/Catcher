@@ -20,6 +20,8 @@ public class player : MonoBehaviour {
     public AudioSource damage;
     public AudioSource power;
 
+    public AudioSource music;
+
     bool tone = false;
     public int tone2 = 0;
 
@@ -37,6 +39,7 @@ public class player : MonoBehaviour {
         //transform.position = new Vector2(-0.604f, -3.044f);
        
         //coin = GetComponent<AudioSource>();
+        music.Play();
 	}
 
     void OnCollisionEnter2D(Collision2D coll)

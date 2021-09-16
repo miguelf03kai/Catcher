@@ -9,9 +9,10 @@ public class paause : MonoBehaviour {
     public static bool stopped = false;
     public Text p = null;
 
+    AudioSource audioSource;
 	// Use this for initialization
 	void Start () {
-		
+		audioSource = GameObject.FindGameObjectWithTag("Player").GetComponent<player>().music;
 	}
 	
 	// Update is called once per frame
@@ -26,6 +27,7 @@ public class paause : MonoBehaviour {
             Time.timeScale = 1;
             stopped = false;
             p.text = "Pause";
+            audioSource.Play();
             
         }
         else if (Time.timeScale == 1)
@@ -34,6 +36,7 @@ public class paause : MonoBehaviour {
             Debug.Log("paused");
             stopped = true;
             p.text = "Resume";
+            audioSource.Pause();
         }
     }
 }

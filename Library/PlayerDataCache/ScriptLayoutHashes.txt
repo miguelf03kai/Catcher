@@ -1,4 +1,4 @@
-Android
+WebGL
 SceneListBegin?
 Assets/main_menu.unity
 Assets/main.unity
@@ -120,7 +120,8 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 d23d64830d2781b66049e6e44e43a615 Assembly-CSharp.dll:.points
-7e2d7c53499197a4603f98da5d96f81d Assembly-CSharp.dll:.player
+6da0e98252c7108c9084e5141f6a870c Assembly-CSharp.dll:.player
+e067c66af3ff77c420f74e9949b9d4e1 Assembly-CSharp.dll:.statistics
 9b27a7f5ee8764ef327375a6fc3500ba Assembly-CSharp.dll:.paause
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
@@ -155,6 +156,5 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.options
-e067c66af3ff77c420f74e9949b9d4e1 Assembly-CSharp.dll:.statistics
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.star
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.options
