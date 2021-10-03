@@ -15,6 +15,12 @@ public class createObject : MonoBehaviour {
     int test1 = 0;
     int limit = 0;
 
+    int[] easy = new int[] {14,30,50};
+    int[] normal = new int[] {7,15,25};
+    int[] hard = new int[] {5,10,20};
+
+    int[] creationTime = new int[] {};
+
     public int creation = 5;
 
     public Text lv = null;
@@ -28,14 +34,17 @@ public class createObject : MonoBehaviour {
         if (food_gravity.level == 2){
             lv.text = "Easy";
             creation = 5;
+            creationTime = easy;
             }
         else if (food_gravity.level == 4){
             lv.text = "Normal";
-            creation = 2;
+            creation = 5;
+            creationTime = normal;
             }
-        else if (food_gravity.level == 8){
+        else if (food_gravity.level == 5){
             lv.text = "Hard";
-            creation = 1;
+            creation = 5;
+            creationTime = hard;
             }
      
 	}
@@ -60,7 +69,7 @@ public class createObject : MonoBehaviour {
     IEnumerator Example()
     {
 
-        if (test1 == 10)
+        if (test1 == creationTime[0])
         {
             int type = Random.Range(1,3);
             Debug.Log(spawnStar);
@@ -75,11 +84,11 @@ public class createObject : MonoBehaviour {
             //Debug.Log(position[i]);
         }
 
-        if (test1 == 20)
+        if (test1 == creationTime[1])
         {
             Instantiate(damage, new Vector2(position[Random.Range(0, position.Length)], 7.50f), transform.rotation);
             
-            if(creation == 2 || creation == 1){
+            if(creation == 5 || creation == 1){
                 Instantiate(damage, new Vector2(position[Random.Range(0, position.Length)], 7.50f), transform.rotation);
                 Debug.Log("Obejct Created");
             }  
@@ -87,7 +96,7 @@ public class createObject : MonoBehaviour {
             //Debug.Log("limit "+limit);
         }
 
-        if (test1 == 40)
+        if (test1 == creationTime[2])
             test1 = 0;
 
         if(spawnStar == 1000){
@@ -99,7 +108,7 @@ public class createObject : MonoBehaviour {
         test1++;
         spawnStar++;
         yield return new WaitForSeconds(creation);
-        //Debug.Log(test1);
+        Debug.Log("test1 "+test1);
 
     }
 }

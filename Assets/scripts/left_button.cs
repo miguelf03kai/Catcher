@@ -27,7 +27,7 @@ public class left_button : MonoBehaviour {
         }
         else
         {
-            pl.position = new Vector2(pl.position.x - 0.872f, -3.044f);
+            pl.position = new Vector2(pl.position.x - 0.872f, -2.94f);
         }
 
         //if (i == 0)

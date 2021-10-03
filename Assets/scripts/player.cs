@@ -93,7 +93,7 @@ public class player : MonoBehaviour {
             else
             {
                 i++;
-                transform.position = new Vector2(position[i], -3.044f);
+                transform.position = new Vector2(position[i], -2.94f);
             }
 
         }
@@ -106,7 +106,7 @@ public class player : MonoBehaviour {
             else
             {
                 i--;
-                transform.position = new Vector2(position[i], -3.044f);
+                transform.position = new Vector2(position[i], -2.94f);
             }
 
         }

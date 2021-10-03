@@ -26,15 +26,16 @@ public class food_gravity : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
-            float random = position[Random.Range(0, position.Length)];
+            // float random = position[Random.Range(0, position.Length)];
             //Debug.Log(random);
 
-            i = 0;
-            transform.position = new Vector2(random, 5.57f);//vertical_position[i]);
+            // i = 0;
+            // transform.position = new Vector2(random, 5.57f);//vertical_position[i]);
+            Destroy(gameObject);
         }
 
-        if (coll.gameObject.tag == "damage" || coll.gameObject.tag == "food" || coll.gameObject.tag == "fish" || coll.gameObject.tag == "star")
-            Destroy(gameObject);
+        // if (coll.gameObject.tag == "damage" || coll.gameObject.tag == "food" || coll.gameObject.tag == "fish" || coll.gameObject.tag == "star")
+        //     Destroy(gameObject);
     }
 	
 	// Update is called once per frame

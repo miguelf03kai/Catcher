@@ -31,9 +31,9 @@ public class level_select : MonoBehaviour {
     }
     public void hard()
     {
-        food_gravity.level = 8;
-        enemy.level = 8;
-        star.level = 8;
+        food_gravity.level = 5;
+        enemy.level = 5;
+        star.level = 5;
         SceneManager.LoadScene(0);
     }
 }
