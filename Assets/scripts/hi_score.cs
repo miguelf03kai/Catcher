@@ -33,15 +33,16 @@ public class hi_score : MonoBehaviour {
             {
                 hi_score1Normal = player.points;
                 PlayerPrefs.SetInt("Normal", hi_score1Normal);
-                Debug.Log(hi_score1Normal);
+                Debug.Log("level Normal "+hi_score1Normal);
             }
       }
       if(levelTrash == "Hard"){
+          Debug.Log("Level Hard");
             if (hi_score1Hard < player.points)
             {
                 hi_score1Hard = player.points;
                 PlayerPrefs.SetInt("Hard", hi_score1Hard);
-                Debug.Log(hi_score1Hard);
+                Debug.Log("level hard "+hi_score1Hard);
             }
       }
 

@@ -47,7 +47,7 @@ public class points : MonoBehaviour {
             lev.text = "Normal";
             hi_score.levelTrash = "Normal";
             }
-        else if (food_gravity.level == 8){
+        else if (food_gravity.level == 5){
             lev.text = "Hard";
             hi_score.levelTrash = "Hard";
         }
