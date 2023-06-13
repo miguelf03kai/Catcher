@@ -12,10 +12,7 @@ public class food : MonoBehaviour {
  
 	// Use this for initialization
 	void Start () {
-        //rb = GetComponent<Rigidbody2D>();
-        
         InvokeRepeating("methodWaint", 0.5f,1.0f);
-        
 	}
 
     void OnTriggerEnter2D(Collider2D other)
@@ -30,11 +27,8 @@ public class food : MonoBehaviour {
 
     //Update is called once per frame
     void Update() {
-        //Debug.Log(position_y);
-
         if (transform.position.y < -4.16f)
         {
-            //apply specific value from list
             random = position[Random.Range(0, position.Length)];
         }
     }

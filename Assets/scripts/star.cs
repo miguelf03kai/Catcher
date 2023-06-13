@@ -18,10 +18,8 @@ public class star : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
             float random = position[Random.Range(0, position.Length)];
-            //Debug.Log(random);
 
             i = 0;
-            //transform.position = new Vector2(random, 5.57f);//vertical_position[i]);
 			Destroy(gameObject);
         }
 
@@ -38,8 +36,6 @@ public class star : MonoBehaviour {
 
         if (transform.position.y < -3.873f)
         {
-            //transform.position = new Vector2(position[Random.Range(0,position.Length)],5.57f);
-            //Debug.Log("test");
             Destroy(gameObject);
         }
 

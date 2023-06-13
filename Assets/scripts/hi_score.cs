@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class hi_score : MonoBehaviour {
 
-    //public Text h_p;
     int hi_score1Easy = 0;
     int hi_score1Normal = 0;
     int hi_score1Hard = 0;
@@ -45,13 +44,11 @@ public class hi_score : MonoBehaviour {
                 Debug.Log("level hard "+hi_score1Hard);
             }
       }
-
-        //h_p.text = "" + hi_score1;
   
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//Debug.Log(levelTrash);
+
 	}
 }

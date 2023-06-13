@@ -29,14 +29,5 @@ public class right_button : MonoBehaviour {
         {
             pl.position = new Vector2(pl.position.x + 0.872f, -2.94f);
         }
-        //if (i == 4)
-        //{
-        //    Debug.Log("Stop Here");
-        //}
-        //else
-        //{
-        //    i++;
-        //    transform.position = new Vector2(pl.position[i], -3.044f);
-        //}
     }
 }

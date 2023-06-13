@@ -12,7 +12,6 @@ public class player : MonoBehaviour {
     public static int points;
     public Text myPoints,text_life;
     points p;
-    //float init_position = -0.604f;
     float[] position = new float[] { -2.372f, -1.486f, -0.604f, 0.281f, 1.164f };
     int i = 2;
     public AudioSource coin;
@@ -28,17 +27,8 @@ public class player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //rb = GetComponent<Rigidbody2D>();
-        //p = (points)GetComponent<points>();
         points = 0;
         text_life.text = "" + life;
-        //myPoints.text = "" + p.score;
-
-        //Debug.Log(position[3]);
-
-        //transform.position = new Vector2(-0.604f, -3.044f);
-       
-        //coin = GetComponent<AudioSource>();
         music.Play();
 	}
 
@@ -50,7 +40,6 @@ public class player : MonoBehaviour {
             life -= 1;
             damage.Play();
 
-            //Debug.Log("you got "+points);
             text_life.text = "" + life;   
         }
         else if(coll.gameObject.tag == "food" || coll.gameObject.tag == "fish")
@@ -71,7 +60,6 @@ public class player : MonoBehaviour {
             else
                 coin.Play();
 
-            //Debug.Log(points);
         }
         else if(coll.gameObject.tag == "star"){
             points += 1000;
@@ -86,58 +74,20 @@ public class player : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
-            if (i == 4)
-            {
-                //Debug.Log("Stop Here");
-            }
-            else
+            if (i != 4)
             {
                 i++;
                 transform.position = new Vector2(position[i], -2.94f);
             }
-
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            if (i == 0)
-            {
-                //Debug.Log("Stop Here");
-            }
-            else
+            if (i != 0)
             {
                 i--;
                 transform.position = new Vector2(position[i], -2.94f);
             }
-
         }
-        
-        
-
-
-        //if (Input.GetKeyUp(KeyCode.RightArrow))
-        //{
-        //    if (transform.position.x == 1.112269f)
-        //    {
-        //        Debug.Log("stay there");
-        //    }
-        //    else
-        //    {
-        //        transform.position = new Vector2(transform.position.x + 0.872f, -3.044f);
-        //    }
-
-        //}
-
-        //else if (Input.GetKeyUp(KeyCode.LeftArrow))
-        //{
-        //    if (transform.position.x == -2.359377f)
-        //    {
-        //        Debug.Log("stay there");
-        //    }
-        //    else
-        //    {
-        //        transform.position = new Vector2(transform.position.x - 0.872f, -3.044f);
-        //    }
-        //}
 
         if (life == 0)
         {

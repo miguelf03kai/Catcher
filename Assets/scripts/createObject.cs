@@ -10,7 +10,6 @@ public class createObject : MonoBehaviour {
     public GameObject damage = null;
     public GameObject star;
     float[] position = new float[] { -2.372f, -1.486f, -0.604f, 0.281f, 1.164f };
-    //float[] vertical_position = new float[] { 5.422f, 4.577f, 3.732f, 2.887f, 2.042f, 1.197f, 0.352f, -0.493f, -1.338f, -2.183f, -3.028f, -3.873f };
     int i = 0;
     int test1 = 0;
     int limit = 0;
@@ -29,40 +28,37 @@ public class createObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //StartCoroutine(Example());
+        //check if the game is paused and change the state
+        if(pause.stopped == true && Time.timeScale == 0){
+            pause.stopped = false;
+            Time.timeScale = 1;
+        }
 
         if (food_gravity.level == 2){
             lv.text = "Easy";
             creation = 5;
             creationTime = easy;
-            }
+        }
         else if (food_gravity.level == 4){
             lv.text = "Normal";
             creation = 5;
             creationTime = normal;
-            }
+        }
         else if (food_gravity.level == 5){
             lv.text = "Hard";
             creation = 5;
             creationTime = hard;
-            }
+        }
      
 	}
 	
 	// Update is called once per frame
 	void Update () {
         
-        //if (food_gravity.i == 2)
-        //{
-        //    Debug.Log("test");
-        //}
-     if (paause.stopped != true)
+        if (pause.stopped != true)
         {
-            //if (limit <= 7)
-                StartCoroutine(Example());    
+            StartCoroutine(Example());    
         }
-        //Debug.Log(position[2]);
-        //Debug.Log(creation);
 	}
 
 
@@ -77,11 +73,6 @@ public class createObject : MonoBehaviour {
                 Instantiate(food, new Vector2(position[Random.Range(0,position.Length)], 7.50f), transform.rotation);
             else if(type == 2)
                 Instantiate(fish, new Vector2(position[Random.Range(0,position.Length)], 7.50f), transform.rotation);
-             
-            //else if(type == 3)
-            
-            //Instantiate(damage, new Vector2(position[Random.Range(0, position.Length)], 7.00f), Quaternion.identity);
-            //Debug.Log(position[i]);
         }
 
         if (test1 == creationTime[1])
@@ -92,8 +83,6 @@ public class createObject : MonoBehaviour {
                 Instantiate(damage, new Vector2(position[Random.Range(0, position.Length)], 7.50f), transform.rotation);
                 Debug.Log("Obejct Created");
             }  
-            //limit++;
-            //Debug.Log("limit "+limit);
         }
 
         if (test1 == creationTime[2])
